@@ -1,0 +1,21 @@
+{
+    "loginPage": "Login Page",
+    "regPage": "Registration Page",
+    "mainPage": "Main page",
+    "submit": "Submit",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "enterLogin": "Enter Login",
+    "enterPassword": "Enter Password",
+    "enterName": "Enter Name",
+    "emptyFieldError": "Please enter something",
+    "logout": "Logout",
+    "weather": "Weather",
+    "user": "User",
+    "username": "Username",
+    "login": "Login",
+    "registerDate": "Reg.date",
+    "errorTitle": "Something went wrong",
+    "errorDesc": "Your shiny error description here",
+    "ok": "Ok"
+}

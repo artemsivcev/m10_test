@@ -3,9 +3,9 @@ import 'package:m10_test/domain/repositories/weather_repository.dart';
 
 import 'api/network/services/weather_api_service.dart';
 
-/// [WeatherApi] class extends [WeatherRepository] and communicate with api service
-class WeatherApi extends WeatherRepository {
-  WeatherApi(this._weatherApiService);
+/// [WeatherRepositoryImpl] class extends [IWeatherRepository] and communicate with api service
+class WeatherRepositoryImpl extends IWeatherRepository {
+  WeatherRepositoryImpl(this._weatherApiService);
 
   final WeatherApiService _weatherApiService;
 

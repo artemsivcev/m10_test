@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:m10_test/data/user_auth_api.dart';
+import 'package:m10_test/data/user_auth_repository_impl.dart';
 import 'package:m10_test/domain/models/user_details.dart';
 import 'package:m10_test/presentation/auth_screen/login_screen/login_screen.dart';
 
@@ -14,7 +14,7 @@ part 'login_state.dart';
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this._userAuthApi) : super(const Initial());
 
-  final UserAuthApi _userAuthApi;
+  final UserAuthRepositoryImpl _userAuthApi;
 
   Future<void> login(String login, String password) async {
     emit(const Loading());

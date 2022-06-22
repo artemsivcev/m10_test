@@ -17,5 +17,7 @@
     "registerDate": "Reg.date",
     "errorTitle": "Something went wrong",
     "errorDesc": "Your shiny error description here",
+    "errorAlreadyExist": "This user already exist!",
+    "errorLoginOrPassMismatch": "Login or password mismatch or there is no such user in DB!",
     "ok": "Ok"
 }

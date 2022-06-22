@@ -2,10 +2,10 @@ import 'package:m10_test/data/api/storage/user_auth_storage.dart';
 import 'package:m10_test/domain/models/user_details.dart';
 import 'package:m10_test/domain/repositories/user_auth_repository.dart';
 
-/// UserAuthApi class extends [UserAuthRepository]
+/// UserAuthApi class extends [IUserAuthRepository]
 /// and communicate with [UserAuthStorage] storage service
-class UserAuthApi extends UserAuthRepository {
-  UserAuthApi(this._userAuthStorage);
+class UserAuthRepositoryImpl extends IUserAuthRepository {
+  UserAuthRepositoryImpl(this._userAuthStorage);
 
   final UserAuthStorage _userAuthStorage;
 

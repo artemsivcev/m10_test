@@ -1,8 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:m10_test/data/user_auth_api.dart';
+import 'package:m10_test/data/user_auth_repository_impl.dart';
 import 'package:m10_test/domain/models/user_details.dart';
 import 'package:m10_test/presentation/auth_screen/registration_screen/registration_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 part 'registration_cubit.freezed.dart';
 
@@ -14,7 +15,7 @@ part 'registration_state.dart';
 class RegistrationCubit extends Cubit<RegistrationState> {
   RegistrationCubit(this._userAuthApi) : super(const Initial());
 
-  final UserAuthApi _userAuthApi;
+  final UserAuthRepositoryImpl _userAuthApi;
 
   Future<void> registerUser(String name, String login, String password) async {
     emit(const Loading());

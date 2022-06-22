@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:m10_test/data/user_auth_api.dart';
+import 'package:m10_test/data/user_auth_repository_impl.dart';
 import 'package:m10_test/domain/bloc/auth_screen/login_screen/login_cubit.dart';
 import 'package:m10_test/presentation/auth_screen/login_screen/widgets/login_form.dart';
 import 'package:m10_test/presentation/common/error_dialog.dart';
@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(context.read<UserAuthApi>()),
+      create: (context) => LoginCubit(context.read<UserAuthRepositoryImpl>()),
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -39,7 +39,10 @@ class _LoginScreenState extends State<LoginScreen> {
               } else if (state is Error) {
                 showDialog(
                   context: context,
-                  builder: (_) => const ErrorDialog(),
+                  builder: (_) => ErrorDialog(
+                    desc:
+                        AppLocalizations.of(context)!.errorLoginOrPassMismatch,
+                  ),
                 );
               }
             },

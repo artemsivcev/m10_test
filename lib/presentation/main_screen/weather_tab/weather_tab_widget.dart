@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:m10_test/data/weather_api.dart';
+import 'package:m10_test/data/weather_repository_impl.dart';
 import 'package:m10_test/domain/bloc/main_screen/weather_screen/weather_cubit.dart';
 import 'package:m10_test/presentation/common/error_dialog.dart';
 import 'package:m10_test/presentation/common/loader.dart';
@@ -13,7 +13,7 @@ class WeatherTabWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          WeatherCubit(context.read<WeatherApi>())..fetchData(),
+          WeatherCubit(context.read<WeatherRepositoryImpl>())..fetchData(),
       child: BlocConsumer<WeatherCubit, WeatherState>(
         listener: (ctx, state) {
           if (state is Error) {

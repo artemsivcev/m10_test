@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:m10_test/domain/bloc/auth_screen/registration_screen/registration_cubit.dart';
 import 'package:m10_test/presentation/auth_screen/login_screen/login_screen.dart';
-
-import '../../../../domain/bloc/auth_screen/registration_screen/registration_cubit.dart';
 
 class RegistrationForm extends StatefulWidget {
   const RegistrationForm({Key? key}) : super(key: key);
@@ -105,8 +104,8 @@ class _RegistrationFormState extends State<RegistrationForm> {
         TextButton(
           onPressed: () {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute<void>(
-                builder: (BuildContext context) => const LoginScreen(),
+              MaterialPageRoute(
+                builder: (_) => const LoginScreen(),
               ),
             );
           },

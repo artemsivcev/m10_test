@@ -2,6 +2,12 @@
 
 M10 flutter test app.
 
+## Before start:
+
+```
+run cleanAndRebuild.sh
+```
+
 ## Build with:
 
 - flutter_bloc as state management (and freezed to make code clear)

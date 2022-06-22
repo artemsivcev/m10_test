@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:m10_test/data/user_auth_api.dart';
+import 'package:m10_test/domain/bloc/auth_screen/registration_screen/registration_cubit.dart';
 import 'package:m10_test/presentation/auth_screen/registration_screen/widgets/registration_form.dart';
 import 'package:m10_test/presentation/common/error_dialog.dart';
+import 'package:m10_test/presentation/common/loader.dart';
 import 'package:m10_test/presentation/main_screen/main_screen.dart';
-
-import '../../../data/user_auth_api.dart';
-import '../../../domain/bloc/auth_screen/registration_screen/registration_cubit.dart';
-import '../../common/loader.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -33,17 +32,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             listener: (context, state) {
               if (state is Registered) {
                 Navigator.of(context).pushReplacement(
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const MainScreen(),
+                  MaterialPageRoute(
+                    builder: (_) => const MainScreen(),
                   ),
                 );
               } else if (state is Error) {
                 showDialog(
-                    context: context,
-                    builder: (BuildContext context) => const ErrorDialog());
+                  context: context,
+                  builder: (_) => const ErrorDialog(),
+                );
               }
             },
-            builder: (context, state) {
+            builder: (_, state) {
               if (state is Loading) {
                 return const Loader();
               }

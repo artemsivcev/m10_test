@@ -22,8 +22,8 @@ class UserDetails {
   }) : registrationDateTime = registrationDateTime ?? DateTime.now();
 
   @override
-  toString() => "name: $name \n "
-      "login: $login \n"
-      " password: $password \n "
-      "registrationDateTime: $registrationDateTime \n ";
+  toString() => 'name: $name \n '
+      'login: $login \n'
+      ' password: $password \n '
+      'registrationDateTime: $registrationDateTime \n ';
 }

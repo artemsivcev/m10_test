@@ -2,9 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive/hive.dart';
+import 'package:m10_test/domain/models/user_details.dart';
 import 'package:path_provider/path_provider.dart';
-
-import '../../../../domain/models/user_details.dart';
 
 /// Base DB class for storage. In [init] we init Hive and registering
 /// class adapters from here.

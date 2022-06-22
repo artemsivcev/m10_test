@@ -1,9 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:m10_test/data/user_auth_api.dart';
 import 'package:m10_test/domain/models/user_details.dart';
 import 'package:m10_test/presentation/main_screen/user_tab/user_tab_widget.dart';
-
-import '../../../../data/user_auth_api.dart';
 
 part 'user_cubit.freezed.dart';
 

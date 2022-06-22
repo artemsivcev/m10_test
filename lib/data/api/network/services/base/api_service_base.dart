@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
-
-import '../../../../../domain/constants/constants.dart';
-import '../../interceptors/logger_interceptor.dart';
+import 'package:m10_test/data/api/network/interceptors/logger_interceptor.dart';
+import 'package:m10_test/domain/constants/constants.dart';
 
 /// Base api service with dio init
 abstract class ApiServiceBase {
@@ -9,7 +8,7 @@ abstract class ApiServiceBase {
   final Dio dio = Dio(
     BaseOptions(
       baseUrl: NetworkConstants.baseURL,
-      contentType: "application/json",
+      contentType: 'application/json',
       connectTimeout: 30000,
       receiveTimeout: 30000,
     ),

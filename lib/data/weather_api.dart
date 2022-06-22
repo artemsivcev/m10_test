@@ -1,5 +1,6 @@
-import '../domain/models/weather_data.dart';
-import '../domain/repositories/weather_repository.dart';
+import 'package:m10_test/domain/models/weather_data.dart';
+import 'package:m10_test/domain/repositories/weather_repository.dart';
+
 import 'api/network/services/weather_api_service.dart';
 
 /// [WeatherApi] class extends [WeatherRepository] and communicate with api service

@@ -1,14 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part "weather_data.g.dart";
+part 'weather_data.g.dart';
 
 /// Main weather info model
 @JsonSerializable()
 class WeatherData {
-  @JsonKey(name: "weather")
+  @JsonKey(name: 'weather')
   final List<WeatherDesc> weatherDesc;
 
-  @JsonKey(name: "main")
+  @JsonKey(name: 'main')
   final MainWeatherInfo mainWeatherInfo;
 
   WeatherData({
@@ -24,10 +24,10 @@ class WeatherData {
 
 @JsonSerializable()
 class WeatherDesc {
-  @JsonKey(name: "main")
+  @JsonKey(name: 'main')
   final String main;
 
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   final String description;
 
   WeatherDesc({
@@ -43,22 +43,22 @@ class WeatherDesc {
 
 @JsonSerializable()
 class MainWeatherInfo {
-  @JsonKey(name: "temp")
+  @JsonKey(name: 'temp')
   final double temp;
 
-  @JsonKey(name: "feels_like")
+  @JsonKey(name: 'feels_like')
   final double feelsLike;
 
-  @JsonKey(name: "temp_min")
+  @JsonKey(name: 'temp_min')
   final double tempMin;
 
-  @JsonKey(name: "temp_max")
+  @JsonKey(name: 'temp_max')
   final double tempMax;
 
-  @JsonKey(name: "pressure")
+  @JsonKey(name: 'pressure')
   final double pressure;
 
-  @JsonKey(name: "humidity")
+  @JsonKey(name: 'humidity')
   final double humidity;
 
   MainWeatherInfo({
@@ -88,14 +88,14 @@ class MainWeatherInfo {
   }
 
   String convertTemp(double temp) {
-    return "${temp.toStringAsFixed(2)} C";
+    return '${temp.toStringAsFixed(2)} C';
   }
 
   String getHumidityFormatted() {
-    return "${humidity.roundToDouble()}%";
+    return '${humidity.roundToDouble()}%';
   }
 
   String getAirPressureFormatted() {
-    return "${pressure.roundToDouble()} mbar";
+    return '${pressure.roundToDouble()} mbar';
   }
 }

@@ -1,4 +1,4 @@
-import '../models/user_details.dart';
+import 'package:m10_test/domain/models/user_details.dart';
 
 /// [UserAuthRepository] abstract class to communicate with storage|network in data layer
 abstract class UserAuthRepository {

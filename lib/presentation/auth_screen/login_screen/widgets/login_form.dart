@@ -85,8 +85,8 @@ class _LoginFormState extends State<LoginForm> {
         TextButton(
           onPressed: () {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute<void>(
-                builder: (BuildContext context) => const RegistrationScreen(),
+              MaterialPageRoute(
+                builder: (_) => const RegistrationScreen(),
               ),
             );
           },

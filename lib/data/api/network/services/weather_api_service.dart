@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:m10_test/domain/constants/constants.dart';
 
-import '../../../../domain/constants/constants.dart';
 import 'base/api_service_base.dart';
 
 /// The class reliable for backend requests.
@@ -10,9 +10,9 @@ class WeatherApiService extends ApiServiceBase {
     required String lon,
   }) async {
     var queryParameters = {
-      "lat": lat,
-      "lon": lon,
-      "appid": NetworkConstants.weatherApiKey,
+      'lat': lat,
+      'lon': lon,
+      'appid': NetworkConstants.weatherApiKey,
     };
     var response =
         await dio.get('/data/2.5/weather', queryParameters: queryParameters);

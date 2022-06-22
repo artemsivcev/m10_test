@@ -1,10 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:m10_test/presentation/main_screen/weather_tab/weether_tab_widget.dart';
-
-import '../../../../data/weather_api.dart';
-import '../../../constants/constants.dart';
-import '../../../models/weather_data.dart';
+import 'package:m10_test/data/weather_api.dart';
+import 'package:m10_test/domain/constants/constants.dart';
+import 'package:m10_test/domain/models/weather_data.dart';
+import 'package:m10_test/presentation/main_screen/weather_tab/weather_tab_widget.dart';
 
 part 'weather_cubit.freezed.dart';
 

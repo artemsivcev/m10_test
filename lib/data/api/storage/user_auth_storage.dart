@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:hive/hive.dart';
+import 'package:m10_test/domain/constants/constants.dart';
 import 'package:m10_test/domain/models/user_details.dart';
 
-import '../../../domain/constants/constants.dart';
 import 'base/safe_storage_base.dart';
 
 /// UserAuthStorage need to save and get some user settings

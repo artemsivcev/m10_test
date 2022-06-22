@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:m10_test/domain/bloc/main_screen/main_cubit.dart';
 import 'package:m10_test/domain/constants/colours.dart';
 import 'package:m10_test/presentation/main_screen/user_tab/user_tab_widget.dart';
-import 'package:m10_test/presentation/main_screen/weather_tab/weether_tab_widget.dart';
+import 'package:m10_test/presentation/main_screen/weather_tab/weather_tab_widget.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({

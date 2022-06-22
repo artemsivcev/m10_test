@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:m10_test/domain/models/weather_data.dart';
 import 'package:m10_test/presentation/main_screen/weather_tab/widget/parameter_with_icon_row.dart';
-
-import '../../../../domain/models/weather_data.dart';
 
 class WeatherInfoWidget extends StatelessWidget {
   const WeatherInfoWidget({

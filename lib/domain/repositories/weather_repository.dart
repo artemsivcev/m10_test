@@ -1,4 +1,4 @@
-import '../models/weather_data.dart';
+import 'package:m10_test/domain/models/weather_data.dart';
 
 /// [WeatherRepository] abstract class to communicate with network api in data layer
 abstract class WeatherRepository {
